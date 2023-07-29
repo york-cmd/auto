@@ -1,0 +1,26 @@
+subdomain:
+  OneForAll: "python3 tools/subdomain/OneForAll/oneforall.py --target %s --path='tmp/subdomain/oneforall' --brute False --dns False --req False run"
+  KsubEnum: "tools/subdomain/ksubdomain enum --output tmp/subdomain/ksubdomain.txt --domain %s"
+  Subfinder: "tools/subdomain/subfinder -all -d %s -o tmp/subdomain/subfinder.txt"
+  Alterx: "tools/subdomain/alterx -l tmp/subdomain/temp.txt -o tmp/subdomain/alterx.txt"
+  KsubVerify: "tools/subdomain/ksubdomain verify --filename tmp/subdomain/all.txt --only-domain --output result/subdomains/subdomains.txt"
+portscan:
+  Masscan: "masscan -iL tmp/portscan/iplist.txt -p 1-65535 --rate=1500 -oJ tmp/portscan/masscan.json"
+  Nmap: "nmap %s -p %s -sV -oX tmp/portscan/nmap/%s.xml"
+other:
+  Httpx: "tools/other/httpx -fr -nf -threads 100 -l result/services/urls.txt  -json -o result/httpx/urlInfo.json"
+  TideFinger: "tools/other/TideFinger -uf result/httpx/urls.txt -nobr -nopoc -pt 120 -o tmp/TideFinger/TideFinger.txt"
+  Wafw00f: "python tools/other/wafw00f-2.2.0/wafw00f/main.py -i result/httpx/urls.txt -o tmp/wafw00f/waf.json"
+vulnscan:
+  NucleiSingle: "tools/vuln/nuclei/nuclei -u %s -je result/vuln/tools/nuclei.json"
+  NucleiMultiple: "tools/vuln/nuclei/nuclei -l %s -je result/vuln/tools/nuclei.json"
+  Crawlergo: "tools/vuln/crawlergo -c \"/usr/bin/google-chrome\" -t 20 -f smart --fuzz-path --push-to-proxy http://127.0.0.1:7777 %s"
+  XrayListen: "./xray webscan --listen 127.0.0.1:7777  --html-output %s/result/vuln/xray.html > %s/tmp/vuln/xray.log"
+  XscanSingle: "./xscan -url %s -json %s/result/vuln/tools/xscan.json"
+  XscanMultiple: "./xscan -url-file %s -json %s/result/vuln/tools/xscan.json"
+goroutine:
+  Cdn: 5000
+  Nmap: 15
+  Crawlergo: 10
+# https://sct.ftqq.com/sendkey
+serverSendKey: "SCT218015TMcfe6PC43vnW254ILcBEqESX"
