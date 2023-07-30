@@ -13,6 +13,7 @@ func initBanner() {
     ▒   ▒▒ ░░░▒░ ░ ░     ░      ░ ▒ ▒░ 
     ░   ▒    ░░░ ░ ░   ░      ░ ░ ░ ▒  
         ░  ░   ░                  ░ ░
+
 `
 	fmt.Println(banner)
 }

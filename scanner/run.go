@@ -7,6 +7,7 @@ import (
 )
 
 func SingleRun(target string) {
+	log.Println("start a vulnerability scan ...")
 	if commands.Config.ScannerTools.Xscan {
 		log.Println("start vulnerability scanning with xscan ...")
 		xscanSingleRun(target)
@@ -22,8 +23,10 @@ func SingleRun(target string) {
 	}
 	getHtmlResult()
 	printResults()
+	log.Println("vulnerability scan ended .")
 }
 func MultipleRun(filename string) {
+	log.Println("start a vulnerability scan ...")
 	if commands.Config.ScannerTools.Xscan {
 		log.Println("start vulnerability scanning with xscan ...")
 		xscanMultipleRun(filename)
@@ -41,4 +44,5 @@ func MultipleRun(filename string) {
 	}
 	getHtmlResult()
 	printResults()
+	log.Println("vulnerability scan ended .")
 }
