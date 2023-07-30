@@ -1,12 +1,13 @@
 package models
 
 type Config struct {
-	Vulnscan      Vulnscan  `yaml:"vulnscan"`
-	Goroutine     Goroutine `yaml:"goroutine"`
-	Subdomain     Subdomain `yaml:"subdomain"`
-	Portscan      Portscan  `yaml:"portscan"`
-	Other         Other     `yaml:"other"`
-	ServerSendKey string    `yaml:"serverSendKey"`
+	Vulnscan      Vulnscan     `yaml:"vulnscan"`
+	Goroutine     Goroutine    `yaml:"goroutine"`
+	Subdomain     Subdomain    `yaml:"subdomain"`
+	Portscan      Portscan     `yaml:"portscan"`
+	Other         Other        `yaml:"other"`
+	ServerSendKey string       `yaml:"serverSendKey"`
+	ScannerTools  ScannerTools `yaml:"scannerTools"`
 }
 
 type Vulnscan struct {
@@ -41,4 +42,9 @@ type Other struct {
 	Wafw00f    string `yaml:"Wafw00f"`
 	Httpx      string `yaml:"Httpx"`
 	TideFinger string `yaml:"TideFinger"`
+}
+type ScannerTools struct {
+	Xscan  bool `yaml:"xscan"`
+	Nuclei bool `yaml:"nuclei"`
+	Xray   bool `yaml:"xray"`
 }

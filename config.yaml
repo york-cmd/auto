@@ -24,3 +24,7 @@ goroutine:
   Crawlergo: 10
 # https://sct.ftqq.com/sendkey
 serverSendKey: "SCT218015TMcfe6PC43vnW254ILcBEqESX"
+scannerTools:
+  xscan: true
+  nuclei: true
+  xray: true

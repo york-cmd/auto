@@ -8,6 +8,8 @@ import (
 	"auto/collector/subdomain"
 	"auto/collector/urlvalid"
 	"auto/collector/waf"
+	"auto/utils"
+	"fmt"
 	"log"
 )
 
@@ -20,5 +22,6 @@ func Run(domains []string, alterxUse bool) {
 	fingerprint.Run()
 	waf.Run()
 	result.Save()
+	utils.SendMessageToServerChan("信息收集完成, 请查看站点信息 !", fmt.Sprintf("站点数量: %v", len(result.WebInfo)))
 	log.Println("information collection ended .")
 }
