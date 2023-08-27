@@ -22,7 +22,7 @@
 
 ## 工具下载
 
-123盘：https://www.123pan.com/s/lNI5Vv-PG3tv.html
+123盘：123盘：https://www.123pan.com/s/lNI5Vv-AK3tv.html 提取码:j11X
 
 压缩包内存放有信息收集的相关工具，给权限，安装依赖过后执行 `./auto` 即可。
 
