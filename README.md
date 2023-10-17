@@ -26,6 +26,28 @@
 
 压缩包内存放有信息收集的相关工具，给权限，安装依赖过后执行 `./auto` 即可。
 
+安装依赖参考脚本：
+
+```shell
+# 给权限
+chmod +x -R auto
+# oneforall install
+sudo apt update
+sudo apt install git python3-pip -y
+cd OneForAll/
+sudo apt install python3-dev python3-pip python3-testresources -y
+sudo python3 -m pip install -U pip setuptools wheel -i https://mirrors.aliyun.com/pypi/simple/
+sudo pip3 install --ignore-installed -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
+python3 oneforall.py --help
+# masscan nmap install
+apt install masscan -y
+apt insstall nmap -y
+# wafw00f 进到这个目录里面
+python setup.py install
+
+```
+
+
 ## 工具使用
 
 信息收集：这里推荐把 `OneForAll、Subfinder` 的 api 填写完全，`fofa` 这种要会员的的 key 可以在 `github` 找泄露或者咸鱼上买，免费的都尽量给配上。`ksubdomain` 可以修改 `config.yaml` 替换成 `oneforall` 提供的大字典，然后再爆破多级域名。`alterx` 这种根据已知子域生成子域名列表的工具也可以加上，说不了发现一些正常情况发现不了的资产。
