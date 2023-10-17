@@ -162,15 +162,6 @@ go 版本的比较好用，可以通过 `Tide安全团队` 公众号获取。
 python setup.py install
 ```
 
-好像是 python2 环境 ？
-
-也可以直接 `apt` 安装：
-
-```
-apt install wafw00f -y
-```
-
-这样就需要修改一些配置文件。
 
 ### 漏洞扫描
 
