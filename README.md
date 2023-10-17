@@ -91,11 +91,11 @@ Commands:
         └── xscan
 ```
 
+config.yaml 里面就是工具参数和漏扫工具的启用。
+
 注意工具需要和 config.yaml 匹配，自行修改。
 
-比如在 kali 中 wafw00f 可以直接使用，那么就修改 config.yaml 为：
 
-Wafw00f: "wafw00f -i result/httpx/urls.txt -o tmp/wafw00f/waf.json"
 
 ### 信息收集
 
